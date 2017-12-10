@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="eventListener"
+            type="com.example.daggerexample.presentation.main.next.NextFragmentContract.EventListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="next fragment"
+            android:textSize="22sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view"
+            android:onClick="@{() -> eventListener.onSecondClick()}"
+            android:text="second"/>
+
+    </RelativeLayout>
+</layout>
